@@ -1,0 +1,119 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  background-color: white;
+  border-radius: 2rem;
+  margin-top: 20vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+.container__login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.login_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.input__field {
+  margin-top: 20px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: red;
+}
+
+.input__field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.input__field input:is(:focus, :valid) {
+  border-color: #4070f4;
+}
+.input__field input:is(:focus, :valid) ~ svg {
+  color: #4070f4;
+}
+.input__field svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(110, 110, 110);
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.icon__hidden {
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login__forgot a {
+  cursor: pointer;
+  font-size: 14px;
+  color: #4070f4;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none
+}
+
+.login__forgot p:hover {
+  text-decoration: underline;
+  color: #3055bb;
+}
+
+.login__button {
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.login__button:hover {
+  background-color: #3333;
+  transition: all 0.2s ease-in-out;
+}
+
+.login__signup {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.signup__title {
+  cursor: pointer;
+  font-size: 14px;
+  color: #4070f4;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.signup__title:hover {
+  text-decoration: underline;
+  color: #3055bb;
+}
+
+.login__signup a{
+  text-decoration: none;
+}
