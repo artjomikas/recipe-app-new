@@ -17,18 +17,21 @@ const Favourites = () => {
   }, [user?.email]);
 
   return (
-    <div className={styles.grid}>
-      {favoritesList?.map((item, i) => {
-        return (
-          <div key={i} className={styles.grid__card}>
-            <Link to={"/recipe/" + item.id}>
-              <img src={item.image} alt={item.title}></img>
-              <h4>{item.title}</h4>
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h2 className={styles.title}>Favourites</h2>
+      <div className={styles.grid}>
+        {favoritesList?.map((item, i) => {
+          return (
+            <div key={i} className={styles.grid__card}>
+              <Link to={"/recipe/" + item.id}>
+                <img src={item.image} alt={item.title}></img>
+                <h4>{item.title}</h4>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

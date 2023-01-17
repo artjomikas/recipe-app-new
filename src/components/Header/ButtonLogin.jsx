@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const ButtonLogin = () => {
   const { user, logout } = UserAuth();
-  
+
   const navigate = useNavigate();
   const handleSignOut = async () => {
     try {
@@ -20,12 +20,6 @@ const ButtonLogin = () => {
     <div>
       {user != null ? (
         <div className={styles.signout__container}>
-          <Link to="/edit">
-            <div>
-              <button className={styles.login__button}>Edit profile</button>
-            </div>
-          </Link>
-
           <div>
             <button className={styles.login__button} onClick={() => handleSignOut()}>
               Sign Out

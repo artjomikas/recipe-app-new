@@ -11,6 +11,7 @@ const Bookmark = (props) => {
   const recipeDetails = props.recipeDetails;
 
   const addToDb = async () => {
+    console.log("Dd")
     try {
       const docRef = doc(db, "favorites", user.email);
       const docSnap = await getDoc(docRef);

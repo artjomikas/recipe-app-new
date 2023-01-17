@@ -48,21 +48,23 @@ const Recipe = () => {
       {Object.keys(recipeDetails).length === 0 ? (
         "loading..."
       ) : (
-        <div style={{ display: "flex" }}>
+        <>
           <div>
             <h2 className={styles.recipe_wrapper__title}>{recipeDetails.title}</h2>
-            <img src={recipeDetails.image} alt={recipeDetails.title + " image"} />
+            <img style={{ objectFit: "fill" }} src={recipeDetails.image} alt={recipeDetails.title + " image"} />
           </div>
 
           <div className={styles.info}>
-            <button className={activeTab === "instructions" ? styles.button_active : styles.button} onClick={() => setActiveTab("instructions")}>
-              Instructions
-            </button>
-            <button className={activeTab === "ingredients" ? styles.button_active : styles.button} onClick={() => setActiveTab("ingredients")}>
-              Ingredients
-            </button>
+            <div className={styles.container}>
+              <button className={activeTab === "instructions" ? styles.button_active : styles.button} onClick={() => setActiveTab("instructions")}>
+                Instructions
+              </button>
+              <button className={activeTab === "ingredients" ? styles.button_active : styles.button} onClick={() => setActiveTab("ingredients")}>
+                Ingredients
+              </button>
 
-            <Bookmark recipeDetails={recipeDetails} favouritesList={favoritesList} id={params.name} />
+              <Bookmark recipeDetails={recipeDetails} favouritesList={favoritesList} id={params.name} />
+            </div>
 
             <div>
               {activeTab === "instructions" ? (
@@ -79,7 +81,7 @@ const Recipe = () => {
               )}
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

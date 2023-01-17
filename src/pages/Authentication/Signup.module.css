@@ -111,7 +111,7 @@
   flex-direction: row;
   align-items: center;
 }
-.info__text svg{
+.info__text svg {
   display: flex;
   align-items: center;
 }
@@ -130,4 +130,16 @@
 
 .signup__signup a {
   text-decoration: none;
+}
+
+.icon__hidden {
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.error__text{
+  padding-top: 13px;
+  font-weight: 600;
+  color: rgb(236, 14, 14)
 }

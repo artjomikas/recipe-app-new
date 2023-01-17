@@ -18,3 +18,10 @@
   padding: 1rem;
 }
 
+.title{
+  padding-bottom: 10px;
+  padding-top: 20px;
+  color: rgba(56, 56, 56);
+  font-size: 25px;
+  font-weight: 600;
+}

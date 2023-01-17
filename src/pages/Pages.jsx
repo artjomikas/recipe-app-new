@@ -9,7 +9,7 @@ const Pages = () => {
       {location.pathname != "/login" && location.pathname != "/signup" && location.pathname != "/reset-password" && (
         <>
           <Header />
-          <Category />
+          {location.pathname != "/favourites" && <Category />}
         </>
       )}
 

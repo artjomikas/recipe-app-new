@@ -6,7 +6,6 @@ const AddingToDatabase = (recipe_details_id) => {
   const { user } = UserAuth();
 
 
-
   return (
     <div>
       <button onClick={addToDb}>TEEEST</button>

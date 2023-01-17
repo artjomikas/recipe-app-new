@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import styles from "./Header.module.css";
+import { UserAuth } from "../../context/AuthContext";
+
 import { useNavigate, Link } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
 import ButtonLogin from "./ButtonLogin";
-import Favourites from "../../pages/Favourites/Favourites";
 import { AiFillStar } from "react-icons/ai";
 
 const Header = () => {
   const [input, setInput] = useState("");
+  const { user } = UserAuth();
 
   const navigate = useNavigate();
 
@@ -31,15 +33,16 @@ const Header = () => {
       </form>
 
       <div className={styles.header__right}>
-        <Link to="/favourites">
-          <div className={styles.favourites}>
-            <AiFillStar />
-          </div>
-        </Link>
+        {user?.email != null && (
+          <Link to="/favourites">
+            <div className={styles.favourites} title="Bookmarks">
+              <AiFillStar />
+            </div>
+          </Link>
+        )}
 
         <ButtonLogin />
       </div>
-
     </div>
   );
 };
